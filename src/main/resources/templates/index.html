@@ -7,7 +7,23 @@
     <title>Thymeleaf</title>
 </head>
 <body>
-<h1>add Thymeleaf</h1>
-<div th:text="|Sum of 2 + 2 = ${ 2 + 2 }|"></div>
+<h1 th:text="${pageTitle}"></h1>
+<div>
+    <ul>
+        <li th:each="scientist : ${scientists}">
+            <span th:text="${scientist}"></span>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div th:text="${scientists[0]}"></div>
+            <!--<div th:text="${capitalsOfTheWorld['The Netherlands']}"></div>-->
+            <!--<div th:text="${capitalsOfTheWorld.Belgium}"></div>-->
+            <!--<div th:text="${user.name}"></div>-->
+            <!--<div th:text="${user.getName()}"></div>-->
+
+        </li>
+    </ul>
+</div>
 </body>
 </html>
