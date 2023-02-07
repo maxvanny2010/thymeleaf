@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Thymeleaf</title>
 </head>
 <body>
-<h1>Header</h1>
-<div>Starting pages</div>
+<h1>add Thymeleaf</h1>
+<div th:text="|Sum of 2 + 2 = ${ 2 + 2 }|"></div>
 </body>
 </html>
