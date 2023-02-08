@@ -10,7 +10,7 @@ const purgecss = require('gulp-purgecss');
 const production = environments.production;
 gulp.task('watch', () => {
     browserSync.init({
-        proxy: 'localhost:8080',
+        proxy: 'localhost:8081',
     });
     gulp.watch(['src/main/resources/**/*.html'], gulp.series('copy-html+css-and-reload'));
     gulp.watch(['src/main/resources/**/*.css'], gulp.series('copy-css-and-reload'));
