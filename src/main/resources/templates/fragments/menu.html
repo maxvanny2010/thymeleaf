@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<a class="flex items-center px-2 py-2 text-base leading-6 font-medium
+text-gray-900" th:fragment="menu-item(title, link)"
+   th:href="${link}" th:text="${title}">
+</a>
+</body>
+</html>
