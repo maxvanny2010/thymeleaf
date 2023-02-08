@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     content: ['./src/main/resources/templates/*.html'],
     theme: {
@@ -16,10 +18,12 @@ module.exports = {
                 'thymeleaf-gray-light': '#d3dce6',
             },
             fontFamily: {
-                sans: ['Graphik', 'sans-serif'],
-                serif: ['Merriweather', 'serif'],
+                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                serif: ['Merriweather', ...defaultTheme.fontFamily.serif],
             }
         },
     },
-    plugins: [],
-}
+    plugins: [
+        require('@tailwindcss/forms')
+    ],
+};
